@@ -42,7 +42,7 @@ public class Pessoa {
         this.sexo = sexo;
     }
     
-    public String CalcularImc(float peso, float altura) {
+    public String calcularImc(float peso, float altura) {
         double imc;
         
         imc = peso / Math.pow(altura, 2);
