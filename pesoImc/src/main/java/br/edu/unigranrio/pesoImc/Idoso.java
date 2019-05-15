@@ -6,11 +6,8 @@ public class Idoso extends Pessoa{
         super ();
     }
     
-    public String calculaImc(float peso, float altura, char sexo, String resultado) {
-        double imc;
-        
-        imc = peso / Math.pow(altura, 2);
-        
+    public String calculaResultado(char sexo, String resultado, double imc) {
+         
         switch(sexo) {
         
         case 'f':

@@ -5,6 +5,7 @@ public class Pessoa {
     private int idade;
     private char sexo;
     private String resultado;
+    private double imc;
 
     public Pessoa() {
         
@@ -42,10 +43,15 @@ public class Pessoa {
         this.sexo = sexo;
     }
     
-    public String calcularImc(float peso, float altura) {
-        double imc;
+    public double calcularImc(float peso, float altura) {
         
         imc = peso / Math.pow(altura, 2);
+        
+        return imc;
+        
+    }
+    
+    public String calcularResultado(double imc) {
         
         if(imc < 16.0) {
             resultado = "Baixo peso muito grave";
@@ -72,7 +78,7 @@ public class Pessoa {
             resultado = "Obesidade grau III (obesidade mórbida)";
         }
         
-        return resultado;
         
+        return resultado;
     }
 }
