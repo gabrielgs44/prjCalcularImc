@@ -39,13 +39,13 @@ public class Idoso extends Pessoa{
             else if((imc >= 22.0) && (imc <= 27.0)) {
                 return "Peso normal";
             }
-            else if((imc >= 27.1) && (imc <= 30.0)) {
+            else if((imc > 27.0) && (imc <= 30.0)) {
                 return "Sobrepeso";
             }
-            else if((imc >= 30.1) && (imc < 35.0)) {
+            else if((imc > 30.0) && (imc < 35.0)) {
                 return "Obesidade grau I";
             }
-            else if((imc >= 35.1) && (imc <= 39.9)) {
+            else if((imc > 35.0) && (imc <= 39.9)) {
                 return "Obesidade grau II";
             }
             else if(imc >= 40.0) {
