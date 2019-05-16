@@ -1,12 +1,12 @@
 package br.edu.unigranrio.pesoImc;
 
 public class Idoso extends Pessoa{
-    
+    private String resultado;
     public Idoso() {
         super ();
     }
     
-    public String calculaResultado(char sexo, String resultado, double imc) {
+    public final String calcularResultado(double imc, char sexo) {
          
         switch(sexo) {
         
@@ -17,16 +17,16 @@ public class Idoso extends Pessoa{
             else if((imc >= 22.0) && (imc <= 27.0)) {
                 resultado = "Peso normal";
             }
-            else if((imc >= 27.1) && (imc <= 32.0)) {
+            else if((imc > 27.00) && (imc < 32.1)) {
                 resultado = "Sobrepeso";
             }
-            else if((imc >= 32.1) && (imc < 37.0)) {
+            else if((imc >= 32.1) && (imc <= 37.0)) {
                 resultado = "Obesidade grau I";
             }
-            else if((imc >= 37.1) && (imc <= 41.9)) {
+            else if((imc > 37.0) && (imc < 42.0)) {
                 resultado = "Obesidade grau II";
             }
-            else if(imc >= 42.0) {
+            else if(imc >= 42.00) {
                 resultado = "Obesidade grau III (obesidade mórbida)";
             }
             
