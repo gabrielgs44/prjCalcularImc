@@ -1,6 +1,6 @@
 package br.edu.unigranrio.pesoImc;
 
-public class Menina extends Pessoa{
+public class Menina{
     
     public Menina() {
         super ();

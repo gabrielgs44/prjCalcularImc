@@ -1,6 +1,6 @@
 package br.edu.unigranrio.pesoImc;
 
-public class Idoso extends Pessoa{
+public class Idoso{
     private String resultado;
     public Idoso() {
         super ();
