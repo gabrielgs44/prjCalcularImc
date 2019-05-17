@@ -4,7 +4,7 @@ public class Pessoa {
     private double peso, altura;
     private char sexo;
     private int idade;
-    
+
     public Pessoa() {
     }
 
@@ -39,39 +39,32 @@ public class Pessoa {
     public void setIdade(int idade) {
         this.idade = idade;
     }
-    
+
     public double calcularImc(double peso, double altura) {
-        
+
         return peso / Math.pow(altura, 2);
     }
-    
+
     public String resultado(double imc) {
-        
-        if(imc < 16.0) {
+
+        if (imc < 16.0) {
             return "Baixo peso muito grave";
-        } 
-        else if((imc >= 16.0) && (imc <= 16.99)) {
+        } else if ((imc >= 16.0) && (imc < 17.0)) {
             return "Baixo peso grave";
-        } 
-        else if((imc >= 17.0) && (imc <= 18.49)) {
+        } else if ((imc >= 17.0) && (imc < 18.50)) {
             return "Baixo peso";
-        }
-        else if((imc >= 18.50) && (imc <= 24.99)) {
+        } else if ((imc >= 18.50) && (imc < 25.0)) {
             return "Peso normal";
-        }
-        else if((imc >= 25.0) && (imc <= 29.99)) {
+        } else if ((imc >= 25.0) && (imc < 30.0)) {
             return "Sobrepeso";
-        }
-        else if((imc >= 30.0) && (imc <= 34.99)) {
+        } else if ((imc >= 30.0) && (imc < 35.0)) {
             return "Obesidade grau I";
-        }
-        else if((imc >= 35.0) && (imc <= 39.99)) {
+        } else if ((imc >= 35.0) && (imc < 40.0)) {
             return "Obesidade grau II";
-        }
-        else{
+        } else {
             return "Obesidade grau III (obesidade mórbida)";
         }
-                
+
     }
-    
+
 }
