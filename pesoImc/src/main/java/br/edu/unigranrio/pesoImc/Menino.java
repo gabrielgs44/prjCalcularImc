@@ -6,7 +6,8 @@ public class Menino extends Pessoa{
         super ();
     }
     
-    public final String calcularPorcentil(double imc, String resultado, int idade) {
+    public final String calcularPorcentil(double imc, int idade) {
+        String resultado = null;
 
         switch (idade) {
         case 2:
