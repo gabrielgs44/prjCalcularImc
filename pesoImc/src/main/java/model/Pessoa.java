@@ -1,11 +1,12 @@
 package model;
 
-public class Pessoa {
-    private double peso, altura;
+public class Pessoa extends TipoResultado {
+    private double peso, altura, imc;
     private char sexo;
     private int idade;
 
     public Pessoa() {
+        super();
     }
 
     public double getPeso() {
@@ -22,6 +23,14 @@ public class Pessoa {
 
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+
+    public double getImc() {
+        return imc;
+    }
+
+    public void setImc(double imc) {
+        this.imc = imc;
     }
 
     public char getSexo() {
@@ -41,30 +50,26 @@ public class Pessoa {
     }
 
     public double calcularImc(double peso, double altura) {
-
-        return peso / Math.pow(altura, 2);
+        return this.peso / Math.pow(this.altura, 2);
     }
 
-    public String resultado(double imc) {
-
+    public String calcularResultado(double imc) {
         if (imc < 16.0) {
-            return "Baixo peso muito grave";
+            return muitoGrave();
         } else if ((imc >= 16.0) && (imc < 17.0)) {
-            return "Baixo peso grave";
+            return grave();
         } else if ((imc >= 17.0) && (imc < 18.50)) {
-            return "Baixo peso";
+            return baixoPeso();
         } else if ((imc >= 18.50) && (imc < 25.0)) {
-            return "Peso normal";
+            return pesoNormal();
         } else if ((imc >= 25.0) && (imc < 30.0)) {
-            return "Sobrepeso";
+            return sobrepeso();
         } else if ((imc >= 30.0) && (imc < 35.0)) {
-            return "Obesidade grau I";
+            return obesidadeI();
         } else if ((imc >= 35.0) && (imc < 40.0)) {
-            return "Obesidade grau II";
+            return obesidadeII();
         } else {
-            return "Obesidade grau III (obesidade mórbida)";
+            return obesidadeIII();
         }
-
     }
-
 }
