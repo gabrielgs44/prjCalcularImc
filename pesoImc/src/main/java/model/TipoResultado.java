@@ -2,35 +2,35 @@ package model;
 
 public class TipoResultado {
 
-    public String muitoGrave() {
+    public static String muitoGrave() {
         return "Baixo peso muito grave";
     }
 
-    public String grave() {
+    public static String grave() {
         return "Baixo peso grave";
     }
 
-    public String baixoPeso() {
+    public static String baixoPeso() {
         return "Baixo peso";
     }
 
-    public String pesoNormal() {
+    public static String pesoNormal() {
         return "Peso normal";
     }
 
-    public String sobrepeso() {
+    public static String sobrepeso() {
         return "Sobrepeso";
     }
 
-    public String obesidadeI() {
+    public static String obesidadeI() {
         return "Obesidade grau I";
     }
 
-    public String obesidadeII() {
+    public static String obesidadeII() {
         return "Obesidade grau II";
     }
 
-    public String obesidadeIII() {
+    public static String obesidadeIII() {
         return "Obesidade grau III (obesidade mórbida)";
     }
 }

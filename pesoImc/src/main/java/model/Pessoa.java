@@ -1,6 +1,6 @@
 package model;
 
-public class Pessoa extends TipoResultado {
+public class Pessoa{
     private double peso, altura, imc;
     private char sexo;
     private int idade;
@@ -54,22 +54,24 @@ public class Pessoa extends TipoResultado {
     }
 
     public String calcularResultado(double imc) {
+        String resultado;
         if (imc < 16.0) {
-            return muitoGrave();
+            resultado = TipoResultado.muitoGrave();
         } else if ((imc >= 16.0) && (imc < 17.0)) {
-            return grave();
+            resultado = TipoResultado.grave();
         } else if ((imc >= 17.0) && (imc < 18.50)) {
-            return baixoPeso();
+            resultado = TipoResultado.baixoPeso();
         } else if ((imc >= 18.50) && (imc < 25.0)) {
-            return pesoNormal();
+            resultado = TipoResultado.pesoNormal();
         } else if ((imc >= 25.0) && (imc < 30.0)) {
-            return sobrepeso();
+            resultado = TipoResultado.sobrepeso();
         } else if ((imc >= 30.0) && (imc < 35.0)) {
-            return obesidadeI();
+            resultado = TipoResultado.obesidadeI();
         } else if ((imc >= 35.0) && (imc < 40.0)) {
-            return obesidadeII();
+            resultado = TipoResultado.obesidadeII();
         } else {
-            return obesidadeIII();
+            resultado = TipoResultado.obesidadeIII();
         }
+        return resultado;
     }
 }
