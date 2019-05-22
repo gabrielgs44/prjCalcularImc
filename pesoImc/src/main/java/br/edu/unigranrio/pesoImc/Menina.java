@@ -6,7 +6,7 @@ public class Menina{
         super ();
     }
     
-    public final String calcularPorcentil(double imc, int idade) {
+    public String calcularPercentil(double imc, int idade) {
         String resultado = null;
         
         switch (idade) {

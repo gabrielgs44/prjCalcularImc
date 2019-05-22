@@ -9,7 +9,7 @@ import model.Pessoa;
 
 public class PessoaTeste {
     Pessoa pessoa;
-/*
+
     @BeforeEach
     public void setup() {
         pessoa = new Pessoa();
@@ -22,43 +22,44 @@ public class PessoaTeste {
 
     @Test
     public void testarImcMuitoGrave() {
-        Assertions.assertEquals("Baixo peso muito grave",
-                pessoa.resultado(pessoa.calcularImc((float) 45.0, (float) 1.74)));
+        double imc = pessoa.calcularImc(48.0, 1.74);
+        Assertions.assertEquals("Baixo peso muito grave", pessoa.calcularResultado(imc));
     }
 
     @Test
     public void testaImcGrave() {
-        Assertions.assertEquals("Baixo peso grave", pessoa.resultado(70.6));
+        Assertions.assertEquals("Baixo peso grave", pessoa.calcularResultado(pessoa.calcularImc(48.443, 1.74)));
     }
 
     @Test
     public void testarImcBaixoPeso() {
-        Assertions.assertEquals("Baixo peso", pessoa.resultado(pessoa.calcularImc((float) 55.0, (float) 1.74)));
+        Assertions.assertEquals("Baixo peso", pessoa.calcularResultado(pessoa.calcularImc(55.0, 1.74)));
     }
 
     @Test
     public void testarImcPesoNormal() {
-        Assertions.assertEquals("Peso normal", pessoa.resultado(pessoa.calcularImc((float) 56.5, (float) 1.74)));
+        Assertions.assertEquals("Peso normal", pessoa.calcularResultado(pessoa.calcularImc(56.5, 1.74)));
     }
 
     @Test
     public void testarImcSobrePeso() {
-        Assertions.assertEquals("Sobrepeso", pessoa.resultado(pessoa.calcularImc((float) 76.0, (float) 1.74)));
+        Assertions.assertEquals("Sobrepeso", pessoa.calcularResultado(pessoa.calcularImc(76.0, 1.74)));
     }
 
     @Test
     public void testarImcObesidadeGrauI() {
-        Assertions.assertEquals("Obesidade grau I", pessoa.resultado(pessoa.calcularImc((float) 91.0, (float) 1.74)));
+        Assertions.assertEquals("Obesidade grau I", pessoa.calcularResultado(pessoa.calcularImc(91.0, 1.74)));
     }
 
     @Test
     public void testarImcObesidadeGrauII() {
-        Assertions.assertEquals("Obesidade grau II", pessoa.resultado(pessoa.calcularImc((float) 106.0, (float) 1.74)));
+        Assertions.assertEquals("Obesidade grau II", pessoa.calcularResultado(pessoa.calcularImc(106.0, 1.74)));
     }
 
     @Test
     public void testarImcObesidadeGrauMorbida() {
         Assertions.assertEquals("Obesidade grau III (obesidade mórbida)",
-                pessoa.resultado(pessoa.calcularImc((float) 121.5, (float) 1.74)));
-    }*/
+                pessoa.calcularResultado(pessoa.calcularImc(121.5, 1.74)));
+
+    }
 }

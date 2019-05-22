@@ -6,7 +6,6 @@ public class Pessoa{
     private int idade;
 
     public Pessoa() {
-        super();
     }
 
     public double getPeso() {
@@ -50,26 +49,26 @@ public class Pessoa{
     }
 
     public double calcularImc(double peso, double altura) {
-        return this.peso / Math.pow(this.altura, 2);
+        return peso / Math.pow(altura, 2);
     }
 
     public String calcularResultado(double imc) {
-        String resultado;
+        String resultado = null;
         if (imc < 16.0) {
             resultado = TipoResultado.muitoGrave();
-        } else if ((imc >= 16.0) && (imc < 17.0)) {
+        } else if (imc >= 16.0 && imc < 17.0) {
             resultado = TipoResultado.grave();
-        } else if ((imc >= 17.0) && (imc < 18.50)) {
+        } else if (imc >= 17.0 && imc < 18.50) {
             resultado = TipoResultado.baixoPeso();
-        } else if ((imc >= 18.50) && (imc < 25.0)) {
+        } else if (imc >= 18.50 && imc < 25.0) {
             resultado = TipoResultado.pesoNormal();
-        } else if ((imc >= 25.0) && (imc < 30.0)) {
+        } else if (imc >= 25.0 && imc < 30.0) {
             resultado = TipoResultado.sobrepeso();
-        } else if ((imc >= 30.0) && (imc < 35.0)) {
+        } else if (imc >= 30.0 && imc < 35.0) {
             resultado = TipoResultado.obesidadeI();
-        } else if ((imc >= 35.0) && (imc < 40.0)) {
+        } else if (imc >= 35.0 && imc < 40.0) {
             resultado = TipoResultado.obesidadeII();
-        } else {
+        } else if(imc > 40){
             resultado = TipoResultado.obesidadeIII();
         }
         return resultado;

@@ -1,8 +1,8 @@
-package br.edu.unigranrio.pesoImc;
+package model;
 
-public class Menino{
+public class CriancaMasculino extends Pessoa{
     
-    public Menino() {
+    public CriancaMasculino() {
         super ();
     }
     
