@@ -11,18 +11,7 @@ public class CriancaMasculino extends Pessoa{
 
         switch (idade) {
         case 2:
-            if (imc <= 15.0) {
-                resultado = "Baixo Peso";
-
-            } else if (imc > 15.0 && imc <= 18.2) {
-                resultado = "Peso Normal";
-            }
-
-            else if (imc > 18.2 && imc <= 19.2) {
-                resultado = "Sobrepeso";
-            } else if (imc > 19.2) {
-                resultado = "Obesidade";
-            }
+            resultado = CalcularPercentilMasculino.percentil2(imc);
             break;
 
         case 3:
