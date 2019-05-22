@@ -53,7 +53,7 @@ public class Pessoa{
     }
 
     public String calcularResultado(double imc) {
-        String resultado = null;
+        String resultado;
         if (imc < 16.0) {
             resultado = TipoResultado.muitoGrave();
         } else if (imc >= 16.0 && imc < 17.0) {
@@ -68,7 +68,7 @@ public class Pessoa{
             resultado = TipoResultado.obesidadeI();
         } else if (imc >= 35.0 && imc < 40.0) {
             resultado = TipoResultado.obesidadeII();
-        } else if(imc > 40){
+        } else{
             resultado = TipoResultado.obesidadeIII();
         }
         return resultado;

@@ -6,7 +6,7 @@ public class IdosoFeminino extends Pessoa {
         super();
     }
 
-    public String calcularResultadoFeminino(double imc) {
+    public String calcularResultado(double imc) {
         String resultado;
 
         if (imc < 21.9) {
