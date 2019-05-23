@@ -3,7 +3,7 @@ package control;
 import model.IdosoFeminino;
 
 public class ControleIdosoFeminino {
-    IdosoFeminino idFemi;
+    IdosoFeminino idFemi = new IdosoFeminino();
     
     public void InserirIdosoFeminino(double altura, double peso, int idade, char sexo) {
         

@@ -3,7 +3,7 @@ package control;
 import model.CriancaFeminino;
 
 public class ControleCriancaFeminino {
-    CriancaFeminino criFemi;
+    CriancaFeminino criFemi = new CriancaFeminino();
 
     public void InserirCriancaFeminino(double altura, double peso, int idade, char sexo) {
 

@@ -9,7 +9,7 @@ public class Programa {
         
         char sexo;
         double imc = 0;
-        String resultado = null;
+        String resultado;
                
         do {       
         System.out.print("Digite o seu sexo (F OU M): ");
@@ -37,9 +37,10 @@ public class Programa {
         System.out.println("Seu imc: " + imc);
         System.out.println("Você está: " + contpessoa.obterPessoa().calcularResultado(imc));*/
         
+        
         if(idade < 21 && sexo == 'M') {
-        	ControleCriancaMasculino contCriancaMas = new ControleCriancaMasculino();
-        	contCriancaMas.InserirCriancaMasculino(altura, peso, idade, sexo);
+            ControleCriancaMasculino contCriancaMas = new ControleCriancaMasculino();
+            contCriancaMas.InserirCriancaMasculino(altura, peso, idade, sexo);
         	imc = contCriancaMas.obterCriancaMasculino().calcularImc(peso, altura);
         	resultado = contCriancaMas.criMasc.calcularPercentil(imc, idade);
         }
@@ -67,6 +68,7 @@ public class Programa {
         	imc = contIdosoFem.obterIdosoFeminino().calcularImc(peso, altura);
         	resultado = contIdosoFem.idFemi.calcularResultado(imc);
         }
+        
         
         System.out.println("Seu imc: " + imc);
         System.out.println("Você está: " + resultado);
