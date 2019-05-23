@@ -33,7 +33,7 @@ public class Programa {
         contpessoa.inserirPessoa(altura, peso, idade, sexo);
         double imc = contpessoa.obterPessoa().calcularImc(peso, altura);
         System.out.println("Seu imc: " + imc);
-        System.out.println("Você está: " + contpessoa.obterPessoa().calcularResultado(imc));
+        System.out.println("Resultado: " + contpessoa.obterPessoa().calcularResultado(imc));
         
     }
 
