@@ -43,6 +43,30 @@ public class Programa {
         	imc = contCriancaMas.obterCriancaMasculino().calcularImc(peso, altura);
         	resultado = contCriancaMas.criMasc.calcularPercentil(imc, idade);
         }
+        else if(idade < 21 && sexo == 'F') {
+        	ControleCriancaFeminino contCriancaFem = new ControleCriancaFeminino();
+        	contCriancaFem.InserirCriancaFeminino(altura, peso, idade, sexo);
+        	imc = contCriancaFem.obterCriancaFeminino().calcularImc(peso, altura);
+        	resultado = contCriancaFem.criFemi.calcularPercentil(imc, idade);
+        }
+        else if(idade > 20 && idade < 66) {
+        	ControlePessoa contPes = new ControlePessoa();
+        	contPes.inserirPessoa(altura, peso, idade, sexo);
+        	imc = contPes.obterPessoa().calcularImc(peso, altura);
+        	resultado = contPes.pessoa.calcularResultado(imc);
+        }
+        else if(idade > 65 && sexo == 'M') {
+        	ControleIdosoMasculino contIdosoMas = new ControleIdosoMasculino();
+        	contIdosoMas.InserirIdosoMasculino(altura, peso, idade, sexo);
+        	imc = contIdosoMas.obterIdosoMasculino().calcularImc(peso, altura);
+        	resultado = contIdosoMas.idMasc.calcularResultado(imc);
+        }
+        else {
+        	ControleIdosoFeminino contIdosoFem = new ControleIdosoFeminino();
+        	contIdosoFem.InserirIdosoFeminino(altura, peso, idade, sexo);
+        	imc = contIdosoFem.obterIdosoFeminino().calcularImc(peso, altura);
+        	resultado = contIdosoFem.idFemi.calcularResultado(imc);
+        }
         
         System.out.println("Seu imc: " + imc);
         System.out.println("Você está: " + resultado);
