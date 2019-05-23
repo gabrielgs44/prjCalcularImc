@@ -9,9 +9,9 @@ public class IdosoFeminino extends Pessoa {
     public String calcularResultado(double imc) {
         String resultado;
 
-        if (imc < 21.9) {
+        if (imc < 22.0) {
             resultado = TipoResultado.baixoPeso();
-        } else if ((imc >= 22.0) && (imc <= 27.0)) {
+        } else if ((imc > 21.9) && (imc <= 27.0)) {
             resultado = TipoResultado.pesoNormal();
         } else if ((imc > 27.00) && (imc < 32.1)) {
             resultado = TipoResultado.sobrepeso();

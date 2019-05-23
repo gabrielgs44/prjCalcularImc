@@ -20,10 +20,22 @@ public class CriancaMasculinoTeste {
         criMasc = null;
     }
 
+    // idade 2
     @Test
-    public void testarImcMuitoGrave() {
-        
-        //Assertions.assertEquals("Obesidade", criMasc.calcularResultado(imc));
+    public void testarBaixoPeso2() {
+        Assertions.assertEquals("Baixo peso", criMasc.calcularPercentil(15.0, 2));
     }
 
+    @Test
+    public void testarPesoNormal2() {
+        Assertions.assertEquals("Peso normal", criMasc.calcularPercentil(15.10, 2));
+    }
+    @Test
+    public void testarSobrepeso2() {
+        Assertions.assertEquals("Sobrepeso", criMasc.calcularPercentil(18.21, 2));
+    }
+    @Test
+    public void testarObesidade2() {
+        Assertions.assertEquals("Obesidade", criMasc.calcularPercentil(19.21, 2));
+    }
 }
