@@ -72,6 +72,7 @@ public class CalcularPercentilFeminino2 {
             return TipoResultado.obesidadeI().substring(0, 9);
         }
     }
+
     public static String percentil17(double imc) {
         if (imc <= 17.9) {
             return TipoResultado.baixoPeso();
@@ -79,10 +80,11 @@ public class CalcularPercentilFeminino2 {
             return TipoResultado.pesoNormal();
         } else if (imc > 25.2 && imc <= 29.6) {
             return TipoResultado.sobrepeso();
-        } else{
+        } else {
             return TipoResultado.obesidadeI().substring(0, 9);
         }
     }
+
     public static String percentil18(double imc) {
         if (imc <= 18.2) {
             return TipoResultado.baixoPeso();
@@ -90,10 +92,11 @@ public class CalcularPercentilFeminino2 {
             return TipoResultado.pesoNormal();
         } else if (imc > 25.6 && imc <= 30.2) {
             return TipoResultado.sobrepeso();
-        } else{
+        } else {
             return TipoResultado.obesidadeI().substring(0, 9);
         }
     }
+
     public static String percentil19(double imc) {
         if (imc <= 18.4) {
             return TipoResultado.baixoPeso();
@@ -101,10 +104,11 @@ public class CalcularPercentilFeminino2 {
             return TipoResultado.pesoNormal();
         } else if (imc > 26.1 && imc <= 30.98) {
             return TipoResultado.sobrepeso();
-        } else{
+        } else {
             return TipoResultado.obesidadeI().substring(0, 9);
         }
     }
+
     public static String percentil20(double imc) {
         if (imc <= 18.45) {
             return TipoResultado.baixoPeso();
@@ -112,7 +116,7 @@ public class CalcularPercentilFeminino2 {
             return TipoResultado.pesoNormal();
         } else if (imc > 26.6 && imc <= 31.75) {
             return TipoResultado.sobrepeso();
-        } else{
+        } else {
             return TipoResultado.obesidadeI().substring(0, 9);
         }
     }

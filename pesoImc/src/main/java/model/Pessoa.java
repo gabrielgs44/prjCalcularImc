@@ -1,6 +1,6 @@
 package model;
 
-public class Pessoa{
+public class Pessoa {
     private double peso, altura, imc;
     private char sexo;
     private int idade;
@@ -68,7 +68,7 @@ public class Pessoa{
             resultado = TipoResultado.obesidadeI();
         } else if (imc >= 35.0 && imc < 40.0) {
             resultado = TipoResultado.obesidadeII();
-        } else{
+        } else {
             resultado = TipoResultado.obesidadeIII();
         }
         return resultado;

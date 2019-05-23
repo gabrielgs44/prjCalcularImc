@@ -104,7 +104,7 @@ public class CalcularPercentilMasculino {
             return TipoResultado.pesoNormal();
         } else if (imc > 19.4 && imc <= 22.0) {
             return TipoResultado.sobrepeso();
-        } else{
+        } else {
             return TipoResultado.obesidadeI().substring(0, 9);
         }
     }
