@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import model.CriancaMasculino;
 
-public class CriancaMasculinoTeste {
+public class CriancaMasculinoTeste1 {
     CriancaMasculino criMasc;
 
     @BeforeEach
