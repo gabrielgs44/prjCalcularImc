@@ -31,13 +31,6 @@ public class Programa {
         System.out.print("Digite a sua altura: ");
         double altura = leia.nextDouble();
         
-        /*ControlePessoa contpessoa = new ControlePessoa();
-        contpessoa.inserirPessoa(altura, peso, idade, sexo);
-        double imc = contpessoa.obterPessoa().calcularImc(peso, altura);
-        System.out.println("Seu imc: " + imc);
-        System.out.println("Você está: " + contpessoa.obterPessoa().calcularResultado(imc));*/
-        
-        
         if(idade < 21 && sexo == 'M') {
             ControleCriancaMasculino contCriancaMas = new ControleCriancaMasculino();
             contCriancaMas.InserirCriancaMasculino(altura, peso, idade, sexo);
