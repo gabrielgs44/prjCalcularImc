@@ -10,6 +10,10 @@ public class CriancaFeminino extends Pessoa {
         String resultado;
 
         switch (idade) {
+        case 1:
+            resultado = CalcularPercentilFeminino.percentil2(imc);
+            break;
+        
         case 2:
             resultado = CalcularPercentilFeminino.percentil2(imc);
             break;
