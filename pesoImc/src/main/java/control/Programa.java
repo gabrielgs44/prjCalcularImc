@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Programa {
 
-    public static void main(String[] args) throws SexoException, PesoInvalidoException, AlturaInvalidaException {
+    public static void main(String[] args) throws SexoException, PesoInvalidoException, AlturaInvalidaException, IdadeInvalidaException {
         Scanner leia = new Scanner(System.in);
 
         char sexo = 'N';
@@ -23,7 +23,9 @@ public class Programa {
 
                 System.out.print("Digite sua idade: ");
                 idade = leia.nextInt();
-
+                if(idade <= 0)
+                    throw new IdadeInvalidaException(idade);
+                
                 System.out.print("Digite o seu peso: ");
                 peso = leia.nextDouble();
                 if (peso <= 0)
@@ -41,6 +43,9 @@ public class Programa {
                 System.out.println("Problema: " + e.getMessage());
                 continueLoop = true;
             } catch (AlturaInvalidaException e) {
+                System.out.println("Problema: " + e.getMessage());
+                continueLoop = true;
+            } catch(IdadeInvalidaException e) {
                 System.out.println("Problema: " + e.getMessage());
                 continueLoop = true;
             }
