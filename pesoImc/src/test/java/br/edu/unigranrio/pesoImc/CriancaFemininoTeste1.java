@@ -20,7 +20,7 @@ public class CriancaFemininoTeste1 {
         criFemi = null;
     }
 
-    // idade 2
+    // idade 2 e 1
     @Test
     public void testarBaixoPeso2() {
         Assertions.assertEquals("Baixo peso", criFemi.calcularPercentil(15.0, 2));
